@@ -39,7 +39,7 @@ time yolo task=detect mode=train \
 	model=std_weights/yolov8s.pt \
 	device=cpu
 LAST_EXP=`ls -w1 runs/train/ | tail -n 1`
-cp runs/train/$LAST_EXP/weights/best.pt weights/fruits_s.pt
+cp runs/train/$LAST_EXP/weights/best.pt weights/caps.pt
 #TODO results.csv as image
 # -H visualize
 
