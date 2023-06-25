@@ -1,6 +1,6 @@
 #!/bin/bash
 yolo predict \
-  model=weights/caps.pt \
+  model=weights/last.pt \
 	source=datasets/test/images \
 	imgsz=640 \
   save=True \
