@@ -1,7 +1,7 @@
 #!/bin/bash
 yolo predict \
   model=weights/last.pt \
-	source=datasets/test/images \
+	source=datasets/valid/images \
 	imgsz=640 \
   save=True \
   save_txt=True

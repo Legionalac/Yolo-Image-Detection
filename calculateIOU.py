@@ -9,11 +9,11 @@ def calculateIOU(l, p):
     return iou
 
 
-counter = 1
+counter = 81
 f = open("resaults.txt","w")
-while counter < 81:
-    labelPath = "datasets/test/labels/{:03d}.txt"
-    predictedPath = "runs/detect/predict/labels/{:03d}.txt"
+while counter < 193:
+    labelPath = "datasets/valid/labels/{:03d}.txt"
+    predictedPath = "runs/detect/predict4/labels/{:03d}.txt"
     label = open(labelPath.format(counter), "r")
     predicted = open(predictedPath.format(counter), "r")
 
@@ -39,7 +39,7 @@ while counter < 81:
             if max < iou:
                 max = iou
                 maxElement = y
-        if maxElement != -1:
+        if maxElement != -1 and max>0.5:
             l.remove(maxElement)
             correct +=1
     if len(p) > 0:
